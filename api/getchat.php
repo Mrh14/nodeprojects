@@ -1,0 +1,1 @@
+<?phparr = ['status' => 'success',		'result' => 'not found'];		echo json_encode(arr);

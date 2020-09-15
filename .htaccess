@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+
+RewriteRule ^contact contact.php [NC,L]
+RewriteRule ^index index.php [NC,L]
+RewriteRule ^apropos apropos.php [NC,L]
+RewriteRule ^login login.php [NC,L]
+RewriteRule ^logout logout.php [NC,L]
+RewriteRule ^signup signup.php [NC,L]
+RewriteRule ^user/events user/events.php [NC,L]
+
+
+
+</IfModule>

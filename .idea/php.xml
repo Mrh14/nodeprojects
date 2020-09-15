@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/payment/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/payment/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/payment/vendor/php-http/promise" />
+      <path value="$PROJECT_DIR$/payment/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/payment/vendor/composer" />
+      <path value="$PROJECT_DIR$/payment/vendor/php-http/message" />
+      <path value="$PROJECT_DIR$/payment/vendor/php-http/httplug" />
+      <path value="$PROJECT_DIR$/payment/vendor/php-http/guzzle6-adapter" />
+      <path value="$PROJECT_DIR$/payment/vendor/php-http/discovery" />
+      <path value="$PROJECT_DIR$/payment/vendor/moneyphp/money" />
+      <path value="$PROJECT_DIR$/payment/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/payment/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/payment/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/payment/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/payment/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/payment/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/payment/vendor/omnipay/paypal" />
+      <path value="$PROJECT_DIR$/payment/vendor/omnipay/common" />
+      <path value="$PROJECT_DIR$/payment/vendor/clue/stream-filter" />
+      <path value="$PROJECT_DIR$/payment/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/payment/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/payment/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/payment/vendor/guzzlehttp/promises" />
+    </include_path>
+  </component>
+</project>
