@@ -422,19 +422,13 @@ function goo(){
     </div>
 
     <div class="row w-100  " id="stps1">
-        <div class="col-md-8  col-10 col-xl-8 col-sm-10 mx-auto d-flex justify-content-end"  id="stps">
 
-            <div class="col-md-4 " > <button  id="stp1" class="btn btn-primary btn-circle">1</button><p>étape 1</p></div>
-
-            <div class="col-md-4 text-right"> <button  id="stp2" class="btn btn-primary btn-circle" style="opacity:1;cursor:not-allowed;" disabled="enabled" >2</button><p>étape 2</p></div>
-
-        </div>
 
         <div class="col-md-8 col-10 col-xl-8 col-sm-10 mx-auto bg-light p-2" style="margin:0px 0 150px 0;" id="stps1">
 
             <br /> <br />
             <h3 class="pt-4">Pour parler un peu de moi</h3><br />
-            <form id="signup" action="#">
+            <form id="signup" action="includes/json/signupjs.php">
 
 
             <div class="d-flex justify-content-between">
@@ -476,15 +470,9 @@ function goo(){
 
                 <div class="form-group">
                     <div class="d-flex" style="color:grey;">Date de naissance:</div>
-                    <input type="text" class="form-control" name="birthday" value="10/10/1984" placeholder="Date de Naissance" />
-                </div>
-
-
-
-
-
-
-
+                    <!--  <input type="text" class="form-control" name="birthday" value="10/10/1984" placeholder="Date de Naissance" />-->
+                    <input type="date" class="form-control" name="birthday" placeholder="Date de Naissance">
+                  </div>
 
 
                 <div class="form-group pl-5" style="margin-top:1rem">
@@ -584,15 +572,15 @@ function goo(){
 
 
 
-
-                <button type="button" class="btn btn-primary p-3 mx-auto d-block" style="font-size:16px;" id="cg" >Suivant</button>
+                <a href="user/abonnements.php">
+                    <button type="button" class="btn btn-primary p-3 mx-auto d-block" style="font-size:16px;" >Terminer</button></a>
             </form>
 
         </div>
 
     </div>
 
-
+    <!--
 
         <section class="hb-products hb-sectionspace hb-bg hb-haslayout d-none" id="stps2">
             <div class="container">
@@ -613,34 +601,34 @@ function goo(){
                         <div class="row">
                         <div id="hb-products" class="hb-productsarea owl-carousel owl-theme hb-haslayout  d-flex justify-content-center">
 
-                            <?php $ij=0;$newtabx= array(); foreach($resultx as $key => $value) {$newtabx[$key] = $value;$newtab2= array();
+                            <?php /*$ij=0;$newtabx= array(); foreach($resultx as $key => $value) {$newtabx[$key] = $value;$newtab2= array();
 
                             foreach ($newtabx[$key] as $key2 => $value2) {
                                 $newtab2[$key2] = $value2;
-                            } ?>
+                            } */?>
                             <div class="item">
-                                <div class="hb-pricingbox clickprice <?php if(isset($_GET['idpack'])){ if($newtab2['idpack']==$_GET['idpack']){echo'active';}} ?>" style="cursor:pointer;"   >
+                                <div class="hb-pricingbox clickprice <?php /*if(isset($_GET['idpack'])){ if($newtab2['idpack']==$_GET['idpack']){echo'active';}} */?>" style="cursor:pointer;"   >
                                 <figure class="hb-pricing-img" style="position:relative;">
-                                    <img src="user/assets/upload/<?php echo $newtab2['picture'] ?>" alt="images description" >
+                                    <img src="user/assets/upload/<?php /*echo $newtab2['picture'] */?>" alt="images description" >
 
                                 </figure>
                                     <div class="pricingcontent">
                                         <h3>
-                                            <?php echo $newtab2['packname'] ?>
-                                            <span class=""><?php echo $newtab2['amount'] ?>€</span>
+                                            <?php /*echo $newtab2['packname'] */?>
+                                            <span class=""><?php /*echo $newtab2['amount'] */?>€</span>
                                         </h3>
                                         <ul class="list-unstyled hb-pricinglist">
-                                            <li><?php echo $newtab2['nbvisio'] ?> visios (1h puis 30mn). <?php echo $newtab2['hrvisio'] ?> h</li>
-                                            <li><?php echo $newtab2['nbpublic'] ?> Rdv public (1h puis 30mn). <?php echo $newtab2['hrpublic'] ?> h</li>
-                                            <li><?php echo $newtab2['nbdomicile'] ?> Rdv à Domicile (1h puis 30mn). <?php echo $newtab2['hrdomicile'] ?> h</li>
+                                            <li><?php /*echo $newtab2['nbvisio'] */?> visios (1h puis 30mn). <?php /*echo $newtab2['hrvisio'] */?> h</li>
+                                            <li><?php /*echo $newtab2['nbpublic'] */?> Rdv public (1h puis 30mn). <?php /*echo $newtab2['hrpublic'] */?> h</li>
+                                            <li><?php /*echo $newtab2['nbdomicile'] */?> Rdv à Domicile (1h puis 30mn). <?php /*echo $newtab2['hrdomicile'] */?> h</li>
 
                                         </ul>
                                         <div class="hb-btnarea" >
-                                            <input type="radio" name="idpack[]" id="idpack" value=" <?php echo $newtab2['idpack'] ?>"  <?php if(isset($_GET['idpack'])){ if($newtab2['idpack']==$_GET['idpack']){echo'checked';}} ?> />
+                                            <input type="radio" name="idpack[]" id="idpack" value=" <?php /*echo $newtab2['idpack'] */?>"  <?php /*if(isset($_GET['idpack'])){ if($newtab2['idpack']==$_GET['idpack']){echo'checked';}} */?> />
                                         </div>
                                     </div>
                                 </div>
-                            </div> <?php  } ?></div>  </div>
+                            </div> <?php /* } */?></div>  </div>
 
 
 
@@ -652,7 +640,7 @@ function goo(){
 
 
 
-                <button type="button" class="btn btn-primary mx-auto mt-3 p-3 d-block"  style="font-size:16px;" id="sg" >Soumettre</button>
+                <button type="button" class="btn btn-primary mx-auto mt-3 p-3 d-block"  style="font-size:16px;" id="sg" >Soumettre</button>-->
         </div>
 
     </section>

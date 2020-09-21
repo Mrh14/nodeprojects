@@ -711,7 +711,7 @@ $packs = array();$newtabx= array(); foreach($resultsz1 as $key => $value) {$newt
                             </select>
                         </div>
 
-                    <!--    <div class="form-group row d-flex justify-content-center">
+                        <div class="form-group row d-flex justify-content-center">
 
                             <label class="col-sm-4 col-form-label">Date et Heure De Debut</label>
                             <div class="col-sm-8">
@@ -724,8 +724,7 @@ $packs = array();$newtabx= array(); foreach($resultsz1 as $key => $value) {$newt
                                 <input type="text" name="end2" class="form-control pull-right" >
                             </div>
                                 <div class="form-group row d-flex justify-content-center">
-                            </div>-->
-
+                            </div>
                             <?php  if ($paid == '1'){ if($nbs >= $nbpacks || $hoursTotal >= $nbhr){
                                 $btn2 = '<form action="payrdv/charge.php" id="chargerdv" name="chargerdv"  method="post" ><button type="button" id="poster2" data-id="55" class="btn btn-primary waves-effect waves-light mr-5">Payer</button></form>'; } else{
                                 $btn2='<button type="button" id="poster3" class="btn btn-primary waves-effect waves-light mt-2" >Réserver</button>'; } ?>

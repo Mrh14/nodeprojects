@@ -73,7 +73,12 @@ if(isset($idpack)){
                         if(key == 'month1' ){ month1=value;}
                         if(key == 'year1' ){ year1=value;}
                         if(key == 'dta2' ){ dta2=value;}
+                        if(key == 'prevEnable' ){ prevEnable=value;}
+
                     });
+
+                    document.getElementById('left').style.display= prevEnable ? "block" : 'none';
+
                     //cas d'absence d'erreurs de validation de champs ou autres
                     if(er == '0'){
                         if(suc=='1'){
@@ -118,6 +123,8 @@ if(isset($idpack)){
                         if(key == 'year1' ){ year1=value;}
                         if(key == 'dta2' ){ dta2=value;}
                     });
+                    document.getElementById('left').style.display= data.prevEnable ? "block" : 'none';
+                 
                     //cas d'absence d'erreurs de validation de champs ou autres
                     if(er == '0'){
                         if(suc=='1'){
@@ -1161,16 +1168,30 @@ if(isset($idpack)){
                         $firsday = $month.'/01/'.$year;
                         $ladate = $year.'-'.$month.'-01';
                         $firstdayname =date('D', strtotime($firsday)); ?>
+
                         <table id="calendar1" class="booked-calendar">
                             <thead>
                             <tr>
                                 <th class="row d-flex justify-content-center">
 
-                                    <span class="fa fa-chevron-circle-left" style="float:left;margin:0px 0 10px 0;padding-left:10px;" ></span>
-                                    <span class="month-name"><?php echo moisfr($month2). ' '. $year;  ?></span>
+                                    <span id="left" class="fa fa-chevron-circle-left" style="float:left;margin:0px 0 10px 0;padding-left:10px;" ></span>
+                                    <span class="month-name" onclick="left()"><?php echo moisfr($month2). ' '. $year;  ?></span>
                                     <span class="fa fa-chevron-circle-right"></span>
                                 </th>
+                                <script>
 
+                                /*    function left(){ return ;
+                                        var d = new Date();
+                                        var m = <?php /*echo ($month);*/?>;
+                                        var y = <?php /*echo $year;*/?>;
+                                        if ((d.getMonth()+1)==m ){
+                                            document.getElementById('left').style.display='none';
+                                            console.log(m);
+                                    }};
+
+                                    $(document).ready(function(){  left() });*/
+
+                                </script>
                             </tr>
                             <tr class="months">
                                 <th>Lun</th>
