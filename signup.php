@@ -1,5 +1,7 @@
 <?php include('includes/config.php');
-include('includes/cookie.php'); ?>
+include('includes/config2.php');
+include('includes/cookie.php');
+?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -135,7 +137,7 @@ include('includes/cookie.php'); ?>
     </div>
 
 <?php
- requis("oui","login","index");
+/* requis("oui","login","index");
 
 include('user/includes/json/getdatas.php');
 function calluser($idp,$amount){
@@ -145,7 +147,7 @@ function calluser($idp,$amount){
 
 
 
-?>
+*/?><!--
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 <script>
@@ -223,8 +225,8 @@ function calluser($idp,$amount){
                                             else{
                                                 var fd = new FormData();var files = $('#file')[0].files[0];fd.append('file',files);
                                                 $.ajax({
-                                                    url: 'includes/json/signupejs.php',
-                                                    type: 'post',
+                                                    url: 'includes/json/signupjs.php',
+                                                    type: 'POST',
                                                     data: fd,
                                                     contentType: false,
                                                     processData: false,
@@ -377,11 +379,13 @@ function goo(){
 
 });
 
-        </script>
+        </script>-->
 
 
 	<!--[if lt IE 8]>
+<!--
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+-->
 	<![endif]-->
 	<!--************************************
 			Wrapper Start
@@ -400,161 +404,79 @@ function goo(){
 
 
 
-    <div class="row w-100 mt-5">
-
-        <div class="alert alert-success w-100" style="display:none;" role="alert" id="jsuc">
-            <p> Votre message a été envoyé avec succés. </p>
-        </div>
-        <div class="alert alert-danger w-100"  style="display:none;" role="alert" id="jer" >
-            <h4 class="alert-heading">Erreur:</h4>
-            <p>Veuillez corriger les erreurs suivantes:</p>
-            <hr>
-        </div>
 
 
 
-    </div>
 
-    <div class="row d-flex justify-content-around text-center mb-5 " >
-
+    <div class="row w-100  " id="s">
 
 
-    </div>
-
-    <div class="row w-100  " id="stps1">
-
-
-        <div class="col-md-8 col-10 col-xl-8 col-sm-10 mx-auto bg-light p-2" style="margin:0px 0 150px 0;" id="stps1">
+        <div class="col-md-8 col-10 col-xl-8 col-sm-10 mx-auto bg-light p-2" style="margin:0px 0 150px 0;" id="s">
 
             <br /> <br />
             <h3 class="pt-4">Pour parler un peu de moi</h3><br />
-            <form id="signup" action="includes/json/signupjs.php">
 
+            <form id="si" method="post" action="#">
 
-            <div class="d-flex justify-content-between">
-                <div class="form-group col-md-6 col-6 col-sm-6 col-xl-6 pl-0">
-                    <input type="text" id="nom" class="form-control" placeholder="Nom" required="required">
-                    <div class="invalid-feedback">le nom est trés court !</div>
-                </div>
-                <div class="form-group col-md-6 col-6 col-sm-6 col-xl-6 pr-2">
-                    <input type="text" id="prenom" class="form-control" placeholder="Prénom" required="required">
-                    <div class="invalid-feedback">le prénom est trés court !</div>
-                </div>
-            </div>
+                <div class="d-flex justify-content-between">
+                    <div class="form-group col-md-6 col-6 col-sm-6 col-xl-6 pl-0">
+                        <input type="text" name="nom" class="form-control" placeholder="Nom" required="required">
+                        <div class="invalid-feedback">le nom est trés court !</div>
+                    </div>
+                          <div class="form-group col-md-6 col-6 col-sm-6 col-xl-6 pr-2">
+                             <input type="text" name="prenom" class="form-control" placeholder="Prénom" required="required">
+                             <div class="invalid-feedback">le prénom est trés court !</div>
+                           </div>
+                    </div>
 
-                <div class="form-group">
-                    <select name="sexe" id="sexe" class="form-control">
-                        <option value="sexe">Je suis</option>
-                        <option value="femme">Une Femme</option>
-                        <option value="Homme">Un Homme</option>
-                    </select>
+              <div class="form-group">
+                    <select  name="sexe"  class="form-control">
+                        <option name="sexe"  value="Homme">Un Homme</option>
+                        <option name="sexe"  value="femme">Une Femme</option>
+                     </select>
                     <div class="invalid-feedback">le sexe est invalide!</div>
                 </div>
 
-                <div class="form-group">
-                    <input type="text" id="taille" class="form-control" placeholder="Ma taille en centimètre" required="required">
-                    <div class="invalid-feedback">la taille est invalide!</div>
-                </div>
+
+                 <div class="form-group ">
+                        <input type="text" name="taille" class="form-control" placeholder="Ma taille en centimètre" required="required">
+                        <div class="invalid-feedback">la taille est invalide!</div>
+                 </div>
 
                 <div class="form-group">
-                    <input type="text" id="poid" class="form-control" placeholder="Mon poid en Kilos" required="required">
+                    <input type="text" name="poids" class="form-control" placeholder="Mon poid en Kilos" required="required">
                     <div class="invalid-feedback">le poid est invalide!</div>
                 </div>
 
 
 				 <div class="form-group">
-                    <input type="text" id="tel" class="form-control" placeholder="Téléphone" required="required">
+                    <input type="text" name="tel" class="form-control" placeholder="Téléphone" required="required">
                     <div class="invalid-feedback">le téléphone est invalide!</div>
                 </div>
 
 
                 <div class="form-group">
                     <div class="d-flex" style="color:grey;">Date de naissance:</div>
-                    <!--  <input type="text" class="form-control" name="birthday" value="10/10/1984" placeholder="Date de Naissance" />-->
+                     <!--  <input type="text" class="form-control" name="birthday" value="10/10/1984" placeholder="Date de Naissance" />-->
                     <input type="date" class="form-control" name="birthday" placeholder="Date de Naissance">
-                  </div>
-
-
-                <div class="form-group pl-5" style="margin-top:1rem">
-                    <h3 style="margin-left:-20px;margin-top:40px;">Je désire bénéficier d'un type de coaching</h3><br />
-
-                    <div class="checkbox objectif" style="display:block">
-                        <input id="prisepoid" name="objectifs[]" class="styled" type="checkbox" value="prisepoid">
-                        <label for="prisepoid" style="vertical-align:middle">
-                            Prise de poids
-                        </label>
-                    </div>
-                    <div class="checkbox objectif" style="display:block">
-                        <input id="sportifs" name="objectifs[]" class="styled" type="checkbox" value="sportifs">
-                        <label for="sportifs" style="vertical-align:middle">
-                            Sportifs
-                        </label>
-                    </div>
-                    <div class="checkbox objectif" style="display:block">
-                        <input id="alergie" name="objectifs[]" class="styled" type="checkbox" value="alergie">
-                        <label for="alergie" style="vertical-align:middle">
-                            Régime alimentaire et allergie
-                        </label>
-                    </div>
-                    <div class="checkbox objectif" style="display:block">
-                        <input id="enceinte" name="objectifs[]" class="styled" type="checkbox" value="enceinte">
-                        <label for="enceinte" style="vertical-align:middle">
-                            Femmes enceintes et allaitantes
-                        </label>
-                    </div>
-                    <div class="checkbox objectif" style="display:block">
-                        <input id="digestif" name="objectifs[]" class="styled" type="checkbox" value="digestif">
-                        <label for="digestif" style="vertical-align:middle">
-                            Troubles digestifs
-                        </label>
-                    </div>
-                    <div class="checkbox objectif" style="display:block">
-                        <input id="diabete" name="objectifs[]" class="styled" type="checkbox" value="diabete">
-                        <label for="diabete" style="vertical-align:middle">
-                            Diabète T1 et T2
-                        </label>
-                    </div>
-
-                    <div class="checkbox objectif" style="display:block">
-                        <input id="tca" name="objectifs[]" class="styled" type="checkbox" value="tca">
-                        <label for="tca" style="vertical-align:middle">
-                            TCA
-                        </label>
-                    </div>
-
-                    <div class="checkbox objectif" style="display:block">
-                        <input id="reequilibre" name="objectifs[]" class="styled" type="checkbox" value="reequilibre">
-                        <label for="reequilibre" style="vertical-align:middle">
-                            Rééquilibrage
-                        </label>
-                    </div>
-                    <div class="checkbox objectif" style="display:block">
-                        <input id="enfants" name="objectifs[]" class="styled" type="checkbox" value="enfants">
-                        <label for="enfants" style="vertical-align:middle">
-                            Enfants
-                        </label>
-                    </div>
-
-
-                </div>
-
+                  </div>-->
 
                 <div class="form-group ">
                         <br />
                     <h3>Je désire bénéficier d'un type de coaching</h3>
                     <br />
-                        <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
+                        <input type="range" min="1" max="5" value="3" class="slider" name="typeco" id="myRange">
                         <div class="d-flex justify-content-between"><span id="demo">Cool</span><input type="hidden" name="hiddendemo" id="hiddendemo" value=""/><span id="demo2">Strict</span>   </div>
                         <br />
                         </div>
 
 
                 <div class="form-group">
-                    <input type="email" id="email" class="form-control" placeholder="adresse email" required="required">
+                    <input type="email" name="email" class="form-control" placeholder="adresse email" required="required">
                     <div class="invalid-feedback">l'email est invalide!</div>
                 </div>
                 <div class="form-group">
-                    <input type="password" id="pass" class="form-control" placeholder="mot de passe" required="required">
+                    <input type="password" name="pass" class="form-control" placeholder="mot de passe" required="required">
                     <div class="invalid-feedback">mot de passe trés court!</div>
                 </div>
 
@@ -563,22 +485,37 @@ function goo(){
                     <input type="file" class="custom-file-input" id="file" value="parcourir" name="file">
                     <div class="invalid-feedback mt-0">Veuillez Choisir Une image!</div>
                     <label class="custom-file-label" for="validatedCustomFile">image de profil...</label>
-                    <input type="hidden" class="custom-file-input" id="hfile" value="" name="hfile" >
+                    <input type="hidden" class="custom-file-input" id="hfile" value="" name="file" >
                 </div>
 
 
-
-
-
-
-
-                <a href="user/abonnements.php">
-                    <button type="button" class="btn btn-primary p-3 mx-auto d-block" style="font-size:16px;" >Terminer</button></a>
+               <input type="submit" class="btn btn-primary p-3 mx-auto d-block" style="font-size:16px;" >Terminer</input></a>
             </form>
+                <?php
+
+                $nom = $_POST['nom'] ?? "";
+                $prenom = $_POST['prenom'] ?? "";
+                $sexe = $_POST['sexe'] ?? "";
+                $taille = $_POST['taille'] ?? "";
+                $poids = $_POST['poids'] ?? "";
+                $tel = $_POST['tel'] ?? "";
+                $naissance = "01012000";
+                $typeco = "court";
+                $email = $_POST['email'] ?? "";
+                $pass= $_POST['pass'] ?? "";
+                if(!empty($nom) ){
+                    $sql = "insert into client (nom,prenom,sexe,taille,poids,tel,naissance,type_co,email,pass) values ('$nom','$prenom','$sexe','$taille','$poids','$tel','$naissance','$typeco','$email','$pass')";
+                    $req = mysqli_query($connect, $sql) or die('Erreur SQL!! <br />' . $sql . '<br />' . mysqli_error($bdd));
+                }
+
+                ?>
+
 
         </div>
 
     </div>
+
+
 
     <!--
 
@@ -645,7 +582,7 @@ function goo(){
 
     </section>
 
-    <script>
+ <!--   <script>
         var slider = document.getElementById("myRange");
         var output = document.getElementById("hiddendemo");
         output.value = slider.value;
@@ -656,7 +593,7 @@ function goo(){
         }
     </script>
 
-
+-->
 
 
 
@@ -669,5 +606,5 @@ function goo(){
 		*************************************-->
 		<?php include('templates/footer.php');?>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<!--<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>-->
