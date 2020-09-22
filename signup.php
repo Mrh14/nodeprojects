@@ -416,7 +416,7 @@ function goo(){
             <br /> <br />
             <h3 class="pt-4">Pour parler un peu de moi</h3><br />
 
-            <form id="si" method="post" action="#">
+            <form id="si" method="post" action="reserver.php">
 
                 <div class="d-flex justify-content-between">
                     <div class="form-group col-md-6 col-6 col-sm-6 col-xl-6 pl-0">

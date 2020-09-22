@@ -7,7 +7,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 
 RewriteRule ^login login.php [NC,L]
 RewriteRule ^logout logout.php [NC,L]
-RewriteRule ^reserver test.php [NC,L]
+RewriteRule ^reserver reserver.php [NC,L]
 RewriteRule ^events events.php [NC,L]
 RewriteRule ^categories categories.php [NC,L]
 RewriteRule ^nouvcategorie nouvcat.php [NC,L]

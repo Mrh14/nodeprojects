@@ -1,7 +1,14 @@
-<?php include('templates/header.php');
- requis("oui","login","index");
+<?php
+session_start();
+
+include('templates/header.php');
+
 ?>
         <script>
+            var idpack=<?php if(isset($_SESSION["idpack"]))
+                                { echo "1";}
+            else{echo "0";} ?>;
+            console.log(idpack);
             $('document').ready(function(){
                 var go = 0;var done = 0;var stored= ''; var c = [];
                 //validation form de Login
@@ -56,9 +63,10 @@
                                         }
                                         $('#jsuc').show(1000);
                                         window.setTimeout(function() {
-                                            if(usertype=='admin'){
-                                                window.location.replace("user/events");}
-                                            else{window.location.replace("user/reserver");}
+                                            if(idpack=='1'){
+                                                document.location.href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-32A82241N2057663M";}
+                                            else
+                                            {window.location.replace("user/events");}
                                         },2e3);
                                     }
                                 }

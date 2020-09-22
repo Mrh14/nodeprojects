@@ -1,9 +1,8 @@
 <?php
 include('includes/cookie.php');
 requis("non","login","login");
+
 include('includes/json/getdatas.php');
-
-
 
 
 //pour sa voir si il'y a un plan active

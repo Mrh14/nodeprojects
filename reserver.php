@@ -1,9 +1,11 @@
-<?php include('includes/config.php');
+<?php
+include('includes/config.php');
 include('includes/cookie.php');
 $idpack=$_GET['idpack'];
 if(isset($idpack)){
     session_start();
     $_SESSION["idpack"]=$idpack;
+
 }
 
 ?>
@@ -785,7 +787,7 @@ if(isset($idpack)){
     </div>
 
     <?php
-    requis("oui","login","index");
+
 
     include('user/includes/json/getdatas.php');
     function calluser($idp,$amount){
