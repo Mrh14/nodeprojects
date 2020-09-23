@@ -137,6 +137,8 @@ include('includes/cookie.php');
     </div>
 
 <?php
+
+
 /* requis("oui","login","index");
 
 include('user/includes/json/getdatas.php');
@@ -383,7 +385,7 @@ function goo(){
 
 
 	<!--[if lt IE 8]>
-<!--
+
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 -->
 	<![endif]-->
@@ -397,16 +399,9 @@ function goo(){
 			*************************************-->
 
 
-
 <main id="hb-main" class="hb-main hb-haslayout">
 
 <section class="text-white">
-
-
-
-
-
-
 
     <div class="row w-100  " id="s">
 
@@ -416,7 +411,7 @@ function goo(){
             <br /> <br />
             <h3 class="pt-4">Pour parler un peu de moi</h3><br />
 
-            <form id="si" method="post" action="reserver.php">
+            <form id="si" method="post" action="#">
 
                 <div class="d-flex justify-content-between">
                     <div class="form-group col-md-6 col-6 col-sm-6 col-xl-6 pl-0">
@@ -488,9 +483,7 @@ function goo(){
                     <input type="hidden" class="custom-file-input" id="hfile" value="" name="file" >
                 </div>
 
-
-               <input type="submit" class="btn btn-primary p-3 mx-auto d-block" style="font-size:16px;" >Terminer</input></a>
-            </form>
+                <input type="submit"  class="btn btn-primary p-3 mx-auto d-block" style="font-size:16px;">
                 <?php
 
                 $nom = $_POST['nom'] ?? "";
@@ -502,7 +495,8 @@ function goo(){
                 $naissance = "01012000";
                 $typeco = "court";
                 $email = $_POST['email'] ?? "";
-                $pass= $_POST['pass'] ?? "";
+                $pa= $_POST['pass'] ?? "";
+                $pass=md5($pa);
                 if(!empty($nom) ){
                     $sql = "insert into client (nom,prenom,sexe,taille,poids,tel,naissance,type_co,email,pass) values ('$nom','$prenom','$sexe','$taille','$poids','$tel','$naissance','$typeco','$email','$pass')";
                     $req = mysqli_query($connect, $sql) or die('Erreur SQL!! <br />' . $sql . '<br />' . mysqli_error($bdd));
@@ -510,10 +504,13 @@ function goo(){
 
                 ?>
 
-
+            </form>
         </div>
 
+
     </div>
+
+</section>
 
 
 
@@ -578,9 +575,9 @@ function goo(){
 
 
                 <button type="button" class="btn btn-primary mx-auto mt-3 p-3 d-block"  style="font-size:16px;" id="sg" >Soumettre</button>-->
-        </div>
 
-    </section>
+
+
 
  <!--   <script>
         var slider = document.getElementById("myRange");
@@ -604,6 +601,7 @@ function goo(){
 		<!--************************************
 				Main End
 		*************************************-->
+
 		<?php include('templates/footer.php');?>
 
 <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>

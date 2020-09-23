@@ -1,7 +1,7 @@
 <?php
 include('includes/config.php');
 include('includes/cookie.php');
-$idpack=$_GET['idpack'];
+$idpack=$_GET['idpack'] ?? "";
 if(isset($idpack)){
     session_start();
     $_SESSION["idpack"]=$idpack;

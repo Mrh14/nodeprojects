@@ -53,7 +53,7 @@ include('includes/cookie.php');
 											<a href="signup" class="hb-btn hidden-xs mr-2">S'inscrire</a>
                                             <?php } else {?>
                                     <a href="logout" class="hb-btn hidden-xs mr-2 px-3" title="Déconnexion"><span class="fas fa-sign-out-alt"></span></a>
-                                              <a href="<?php echo $_COOKIE['usertype'] == 'client' ? 'user/reserver' : 'user/events' ; ?>" class="hb-btn hidden-xs mr-2"><?php echo $_COOKIE['usertype'] == 'client' ? 'Réserver un RDV' : 'ESPACE CLIENT' ; ?></a>
+                                              <a href="<?php echo $_COOKIE['usertype'] == 'client' ? 'user/events' : 'user/reserver' ; ?>" class="hb-btn hidden-xs mr-2"><?php echo $_COOKIE['usertype'] == 'client' ? 'ESPACE CLIENT' : 'RESERVER RDV' ; ?></a>
 
 									
                                             <?php } ?>
