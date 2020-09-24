@@ -7,7 +7,6 @@ if(isset($idpack)){
     $_SESSION["idpack"]=$idpack;
 
 }
-
 ?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -126,7 +125,7 @@ if(isset($idpack)){
                         if(key == 'dta2' ){ dta2=value;}
                     });
                     document.getElementById('left').style.display= data.prevEnable ? "block" : 'none';
-                 
+
                     //cas d'absence d'erreurs de validation de champs ou autres
                     if(er == '0'){
                         if(suc=='1'){

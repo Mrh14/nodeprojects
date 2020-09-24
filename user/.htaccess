@@ -18,8 +18,7 @@ RewriteRule ^questions questions.php [NC,L]
 RewriteRule ^abonnements abonnements.php [NC,L]
 RewriteRule ^packs packs.php [NC,L]
 RewriteRule ^abonnes subscribers.php [NC,L]
-
-
+RewriteRule ^admin login.php [NC,L]
 
 
 

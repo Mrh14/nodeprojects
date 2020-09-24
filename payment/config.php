@@ -11,10 +11,10 @@ define('CLIENT_SECRET', 'EAO_N7gNbVVeiX7oAjxiwqQfHAv2PxjgYbzRk4LnsYxO5H1gB27b-Du
 //define('CLIENT_ID', 'AT-e8hgxoFTWCTVrju50QaHE1XNPUuqRprp8w58Uz_22tLJHehQN7uv78D2NiaW9Z69hEmfI8sCcfiBT');
 //define('CLIENT_SECRET', 'EHryLNmkau1-2U6S1xLb22jN2y9_8gih5AeGIsWz0Wp7jj-GqbEGOndEjaF70FplmiQ2plLhFbMKD99u');
 
-define('PAYPAL_RETURN_URL', 'https://visio.fcpo.agency/payment/success.php');
-define('PAYPAL_CANCEL_URL', 'https://visio.fcpo.agency/payment/cancel.php');
-//define('PAYPAL_RETURN_URL', 'http://localhost/nodeprojects2/payment/success.php');
-//define('PAYPAL_CANCEL_URL', 'http://localhost/nodeprojects2/payment/cancel.php');
+//define('PAYPAL_RETURN_URL', 'https://visio.fcpo.agency/payment/success.php');
+//define('PAYPAL_CANCEL_URL', 'https://visio.fcpo.agency/payment/cancel.php');
+define('PAYPAL_RETURN_URL', 'localhost/nodeprojects/payment/success.php');
+define('PAYPAL_CANCEL_URL', 'localhost/nodeprojects/payment/cancel.php');
 define('PAYPAL_CURRENCY', 'USD'); // set your currency here
 
 // Connect with the database
