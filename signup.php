@@ -445,7 +445,7 @@ function goo(){
 
 
 				 <div class="form-group">
-                    <input type="text" name="tel" class="form-control" placeholder="Téléphone" required="required">
+                    <input type="tel" name="tel" class="form-control" placeholder="Téléphone" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" required="required">
                     <div class="invalid-feedback">le téléphone est invalide!</div>
                 </div>
 
@@ -492,7 +492,7 @@ function goo(){
                 $taille = $_POST['taille'] ?? "";
                 $poids = $_POST['poids'] ?? "";
                 $tel = $_POST['tel'] ?? "";
-                $naissance = "01012000";
+                $naissance =$_POST['birthday'] ?? "";
                 $typeco = "court";
                 $email = $_POST['email'] ?? "";
                 $pa= $_POST['pass'] ?? "";

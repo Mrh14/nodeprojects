@@ -64,7 +64,7 @@ include('templates/header.php');
                                         $('#jsuc').show(1000);
                                         window.setTimeout(function() {
                                             if(idpack=='1'){
-                                                document.location.href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-32A82241N2057663M";}
+                                                document.location.href="payer.php";}
                                             else
                                             {window.location.replace("user/events");}
                                         },2e3);
@@ -176,4 +176,5 @@ include('templates/header.php');
 		<!--************************************
 				Main End
 		*************************************-->
-	<?php include('templates/footer.php');?>
+	<?php include('templates/footer.php');
+    session_destroy();?>

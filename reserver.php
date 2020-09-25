@@ -76,9 +76,11 @@ if(isset($idpack)){
                         if(key == 'dta2' ){ dta2=value;}
                         if(key == 'prevEnable' ){ prevEnable=value;}
 
+
                     });
 
                     document.getElementById('left').style.display= prevEnable ? "block" : 'none';
+
 
                     //cas d'absence d'erreurs de validation de champs ou autres
                     if(er == '0'){
@@ -123,8 +125,10 @@ if(isset($idpack)){
                         if(key == 'month1' ){ month1=value;}
                         if(key == 'year1' ){ year1=value;}
                         if(key == 'dta2' ){ dta2=value;}
+                        if(key == 'prevEnable' ){ prevEnable=value;}
                     });
-                    document.getElementById('left').style.display= data.prevEnable ? "block" : 'none';
+                    document.getElementById('left').style.display= prevEnable ? "block" : 'none';
+
 
                     //cas d'absence d'erreurs de validation de champs ou autres
                     if(er == '0'){
