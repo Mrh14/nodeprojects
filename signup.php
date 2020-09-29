@@ -1,6 +1,7 @@
 <?php include('includes/config.php');
 include('includes/config2.php');
 include('includes/cookie.php');
+$idpack=$_GET["id"] ?? "";
 ?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -411,7 +412,7 @@ function goo(){
             <br /> <br />
             <h3 class="pt-4">Pour parler un peu de moi</h3><br />
 
-            <form id="si" method="post" action="#">
+            <form id="si" method="post" action="sup.php?id=<?php echo $idpack?>">
 
                 <div class="d-flex justify-content-between">
                     <div class="form-group col-md-6 col-6 col-sm-6 col-xl-6 pl-0">
@@ -484,27 +485,7 @@ function goo(){
                 </div>
 
                 <input type="submit"  class="btn btn-primary p-3 mx-auto d-block" style="font-size:16px;">
-                <?php
-
-                $nom = $_POST['nom'] ?? "";
-                $prenom = $_POST['prenom'] ?? "";
-                $sexe = $_POST['sexe'] ?? "";
-                $taille = $_POST['taille'] ?? "";
-                $poids = $_POST['poids'] ?? "";
-                $tel = $_POST['tel'] ?? "";
-                $naissance =$_POST['birthday'] ?? "";
-                $typeco = "court";
-                $email = $_POST['email'] ?? "";
-                $pa= $_POST['pass'] ?? "";
-                $pass=md5($pa);
-                if(!empty($nom) ){
-                    $sql = "insert into client (nom,prenom,sexe,taille,poids,tel,naissance,type_co,email,pass) values ('$nom','$prenom','$sexe','$taille','$poids','$tel','$naissance','$typeco','$email','$pass')";
-                    $req = mysqli_query($connect, $sql) or die('Erreur SQL!! <br />' . $sql . '<br />' . mysqli_error($bdd));
-                }
-
-                ?>
-
-            </form>
+                  </form>
         </div>
 
 

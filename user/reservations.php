@@ -4,9 +4,9 @@ requis("non","login","login");
 include('includes/json/getdatas.php');
 
 $tab = "";
-if(isset($_COOKIE['ip'] )) {
+if(isset($_COOKIE['iduser'] )) {
 
-    $req = $bdd->prepare("select * from rendezvous where idr=?");
+    $req = $bdd->prepare("select * from rendezvous where idc=?");
     $req->execute(array(intval($_COOKIE['idconference'])));
     while($ar = $req->fetch()){
         $titre = $ar['titre'];

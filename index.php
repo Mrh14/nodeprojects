@@ -2,8 +2,8 @@
 
 include('user/includes/json/getdatas.php');
 function calluser($idp,$amount){
-    if( isset($_GET['usertype']) ){echo '<a href="#" class="hb-btn changebtn" id="charge" data-price="90" data-id="'.$idp.'" >S\'abonner</a>';}
-    else{echo '<a href="#" class="hb-btn changebtn" id="charge"  data-price="'.$amount.'" data-id="'.$idp.'" >S\'abonner</a>';}
+    if( isset($_GET['usertype']) ){echo '<a href="reserver.php" class="hb-btn changebtn" id="charge" data-price="90" data-id="'.$idp.'" >S\'abonner</a>';}
+    else{echo '<a href="reserver.php" class="hb-btn changebtn" id="charge"  data-price="'.$amount.'" data-id="'.$idp.'" >S\'abonner</a>';}
 }
 ?>
         <script>

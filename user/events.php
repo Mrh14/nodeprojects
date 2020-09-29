@@ -709,7 +709,7 @@ $packs = array();$newtabx= array(); foreach($resultsz1 as $key => $value) {$newt
                                 <div class="modal-dialog modal-dialog" style="margin-top:40px;" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLongTitle">Créer une Conférence</h5>
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Créer une disponibilité</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
@@ -729,7 +729,7 @@ $packs = array();$newtabx= array(); foreach($resultsz1 as $key => $value) {$newt
                                                         <input type="text" name="end" class="form-control pull-right" >
                                                     </div>
 
-                                                    <label class="col-sm-4 col-form-label">NB: </label>
+                                                    <label class="col-sm-4 col-form-label">Type: </label>
                                                     <div class="col-sm-8">
                                                         <input type="text" name="nature" id="nature" class="form-control pull-right" placeholder="nota bene" >
                                                     </div>

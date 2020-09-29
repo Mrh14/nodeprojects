@@ -8,7 +8,7 @@ include('includes/json/getdatas.php');
 //pour sa voir si il'y a un plan active
 $paid = 0;
 $nbpacks = 0; $hoursTotal = 0; $nbs = 0;$nbhr = 0;
-$packs = array();$newtabx= array(); foreach($resultsz1 as $key => $value) {$newtabx[$key] = $value;$newtab2= array();
+$packs = array();$newtabx= array(); foreach($results1 as $key => $value) {$newtabx[$key] = $value;$newtab2= array();
 
     foreach ($newtabx[$key] as $key2 => $value2) {
         $newtab2[$key2] = $value2;

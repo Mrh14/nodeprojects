@@ -5,9 +5,11 @@ include('templates/header.php');
 
 ?>
         <script>
-            var idpack=<?php if(isset($_SESSION["idpack"]))
-                                { echo "1";}
-            else{echo "0";} ?>;
+             var idpack=<?php if(isset($_SESSION["idpack"]))
+                                { $a="1";
+                                    echo $a;}
+                                else{echo "0";} ?>;
+            var idpack1=<?php $idpack1=$_GET["id"] ?? ""; echo $idpack1; ?>;
             console.log(idpack);
             $('document').ready(function(){
                 var go = 0;var done = 0;var stored= ''; var c = [];
@@ -63,7 +65,7 @@ include('templates/header.php');
                                         }
                                         $('#jsuc').show(1000);
                                         window.setTimeout(function() {
-                                            if(idpack=='1'){
+                                            if(idpack=='1' || idpack1=='1'){
                                                 document.location.href="payer.php";}
                                             else
                                             {window.location.replace("user/events");}
@@ -152,7 +154,7 @@ include('templates/header.php');
 
 										<div class="form-group">
 
-											<a href="signup.php" type="submit" class="btn btn-primary">Inscrivez-vous</a>
+											<a href="signup.php?id=<?php echo $a?>" type="submit" class="btn btn-primary">Inscrivez-vous</a>
 
 										</div>
 
@@ -177,4 +179,4 @@ include('templates/header.php');
 				Main End
 		*************************************-->
 	<?php include('templates/footer.php');
-    session_destroy();?>
+	session_destroy();?>

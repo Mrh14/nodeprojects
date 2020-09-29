@@ -119,7 +119,7 @@ include('includes/cookie.php');
                                             <li class="menu-item-has-children"><a href="signup">S'inscrire</a></li>
                                         <?php } else {?>
 
-                                        <li><a href="<?php echo $_COOKIE['usertype'] == 'client' ? 'user/reserver' : 'user/events' ; ?>" class="menu-item-has-children"><?php echo $_COOKIE['usertype'] == 'client' ? 'Réserver un RDV' : 'ADMINISTRATION' ; ?></a></li>
+                                        <li><a href="<?php echo $_COOKIE['usertype'] == 'client' ? 'user/reserver' : 'user/events' ; ?>" class="menu-item-has-children"><?php echo $_COOKIE['usertype'] == 'client' ? 'ESPACE CLIENT' : 'ADMINISTRATION' ; ?></a></li>
                                         <li><a href="logout" class="menu-item-has-children" title="Déconnexion">Déconnexion</a></li>
 
                                         <?php } ?>

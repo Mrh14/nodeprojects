@@ -25,7 +25,7 @@ include('user/includes/json/getdatas.php');
             </div>
 
                 <div class="col-xs-12 col-sm-12"  style="text-align: center" >
-                    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-32A82241N2057663M">
+                    <form action="https://www.sandbox.paypal.com/us/signin">
                     <ul class="list-unstyled hb-paradiselist">
                         <li class="hb-paradisecenterbox">
 										<span class="hb-paradiseiconbox">
